@@ -27,7 +27,7 @@ void CheckCapacity(SeqList* psl);
 //尾插
 void SeqListPushBack(SeqList* psl,DataType x);
 //尾删
-void SeqListPopback(SeqList* psl);
+void SeqListPopBack(SeqList* psl);
 //头插
 void SeqListPushFront(SeqList* psl,DataType x);
 //头删

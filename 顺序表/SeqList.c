@@ -29,7 +29,7 @@ void SeqListDestory(SeqList* psl)
 void SeqListPrint(SeqList* psl)
 {
     assert(psl);
-    for(int i=0;i<psl->size;++i)
+    for(size_t i=0;i<psl->size;++i)
     {
         printf("%d ",psl->array[i]);
     }
@@ -79,7 +79,7 @@ int SeqListFind(SeqList* psl,DataType x)
 {
     assert(psl);
     //遍历顺序表
-    for(int i=0;i<psl->size;++i)
+    for(size_t i=0;i<psl->size;++i)
     {
         //判断是否和要查找的值相等
         if(psl->array[i]==x)
@@ -96,11 +96,11 @@ void SeqListInsert(SeqList* psl,size_t pos,DataType x)
 {
     assert(psl);
     //插入的位置是否正确
-    assert(pos<=psl->size);
+    assert(pos <= psl->size);
     //检查线性表是否已满
     CheckCapacity(psl);
 
-    int end=psl->size;
+    size_t end=psl->size;
     while(end>pos)
     {
         //将插入位置（包括插入位置）之后的数据依次后移
@@ -116,9 +116,9 @@ void SeqListInsert(SeqList* psl,size_t pos,DataType x)
 void SeqListErase(SeqList* psl,size_t pos)
 {
     assert(psl);
-    assert(pos<psl->size);
+    assert(pos<=psl->size);
     //记录删除位置的下一个位置
-    int start=pos+1;
+    size_t start=pos+1;
     while(start<psl->size)
     {
         //删除位置之后的数据前移

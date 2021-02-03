@@ -6,18 +6,25 @@
 //3、针对的所有的元素(除了最后一个)重复上述步骤
 //4、持续对越来越少的元素重复上述步骤，直到没有任何一对数字需要比较
 //
-//第一版的冒泡排序
+void swap(int* a,int* b)
+{
+    int tmp=*a;
+    *a=*b;
+    *b=tmp;
+}
+
 void bubblesort01(int arr[],int n)
 {
-    for(int i=0;i<n-1;++i)
+    for(int i=0;i<n;++i)
     {
-        for(int j=0;j<n-i-1;++j)
+        for(int j=0;j<n-1-i;++j)
         {
             if(arr[j]>arr[j+1])
             {
-                int tmp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=tmp;
+                //int tmp=arr[j];
+                //arr[j]=arr[j+1];
+                //arr[j+1]=tmp;
+                swap(&arr[j],&arr[j+1]);
             }
         }
     }
@@ -86,7 +93,7 @@ int main()
 {
     int arr[10]={1,3,5,7,8,0,9,2,4,6};
     int len=sizeof(arr)/sizeof(arr[0]);
-    bubblesort03(arr,len);
+    bubblesort01(arr,len);
     for(int i=0;i<len-1;++i)
     {
         printf("%d ",arr[i]);

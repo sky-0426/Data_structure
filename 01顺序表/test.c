@@ -24,11 +24,8 @@ void Test01()
     SeqListPopFront(&L);
     SeqListPrint(&L);
 
+    //查找
     printf("%d\n",SeqListFind(&L,3));
-    //
-    //
-    //
-    //
 }
 
 int main()

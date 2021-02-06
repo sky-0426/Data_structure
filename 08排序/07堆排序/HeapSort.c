@@ -32,30 +32,6 @@ void HeapAdjust(int arr[],int index,int len)
         }
     }
 
-    /*
-    //先保存当前结点的下标
-    int max=index;
-    //左右孩子的数组下标
-    int leftchild=2*index+1;
-    int rightchild=2*index+2;
-    //
-    //下标存在，且找出大的那一个
-    if(leftchild<len && arr[leftchild]>arr[max])
-    {
-        max=leftchild;
-    }
-    if(rightchild<len && arr[rightchild]>arr[max])
-    {
-        max=rightchild;
-    }
-    //判断需不需要交换
-    if(max!=index)
-    {
-        swap(&arr[max],&arr[index]);
-        //交换完之后，可能不再满足堆，所以需要递归调整
-        HeapAdjust(arr,max,len);
-    }
-    */
 }
 
 void HeapSort(int arr[],int n)

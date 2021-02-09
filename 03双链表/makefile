@@ -1,2 +1,2 @@
 test:test.c DoubleList.c
-	gcc $^ -o $@ -g
+	g++ $^ -o $@ -g

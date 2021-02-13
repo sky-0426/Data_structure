@@ -1,2 +1,2 @@
 test:Test.c Queue.c
-	gcc $^ -o $@ -g
+	g++ $^ -o $@ -g

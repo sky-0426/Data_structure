@@ -1,2 +1,2 @@
 test:Test.c
-	gcc $^ -o $@ -g
+	g++ $^ -o $@ -g

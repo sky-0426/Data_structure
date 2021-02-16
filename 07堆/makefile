@@ -1,2 +1,2 @@
 heap:Heap.c
-	gcc $^ -o $@ -g
+	g++ $^ -o $@ -g

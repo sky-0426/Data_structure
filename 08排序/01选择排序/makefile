@@ -1,2 +1,2 @@
 selectsort:SelectSort.c
-	gcc $^ -o $@ -g
+	g++ $^ -o $@ -g
